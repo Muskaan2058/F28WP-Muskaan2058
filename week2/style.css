@@ -8,7 +8,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #87CEFA;
+    background-color:#008080;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -19,7 +19,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #87CEFA;
+    background-color: #008080;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -51,8 +51,8 @@ header {
 
 /* Navigation Styles */
 nav ul {
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #333;
     text-align: center;
     list-style-type: none;
     margin: 0;
@@ -64,13 +64,14 @@ nav li {
 }
 
 nav ul li.active {
-    text-decoration: underline;
-    transition: background-color 0.3s ease, color 0.3s ease, text-decoration 0.3s ease; /* Add a smooth transition */
+    color:  #008080;
+    border-top: 5px solid #008080;
+    border-bottom: 5px solid #008080;
 }
 
 nav a {
     display: block;
-    color: #fff;
+    color: #333;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -78,7 +79,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color:#505050; /* lighter shade*/  
+    background-color:#F0FFFF; /* slight shade*/  
 }
 
 /* Banner Styles */
