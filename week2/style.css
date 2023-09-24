@@ -61,17 +61,22 @@ nav li {
     display: inline-block;
 }
 
+nav ul li.active {
+    text-decoration: underline;
+    transition: background-color 0.3s ease, color 0.3s ease, text-decoration 0.3s ease; /* Add a smooth transition */
+}
+
 nav a {
     display: block;
     color: #fff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    transition: background-color 0.3s;  /* Smooth transition for hover effect */
+    transition: background-color 0.3s ease, color 0.3s ease, text-decoration 0.3s ease; /* Add a smooth transition */
 }
 
 nav a:hover {
-    background-color: #505050;  /* Darker shade for hover */
+    background-color:#505050; /* lighter shade*/  
 }
 
 /* Banner Styles */
