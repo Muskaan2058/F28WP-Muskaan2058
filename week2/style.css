@@ -24,10 +24,12 @@ header {
     text-align: center;
     padding: 20px;
     z-index: 100;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   }
   
 /* Placeholder Styles */
   #header-placeholder {
+    display: none;
     height: 80px; /* Adjust this to match the header height */
   }
 
