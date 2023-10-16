@@ -1,4 +1,6 @@
-/* Reset Styles */
+/* ================================
+   Global Styles
+================================ */
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +8,9 @@ body {
     color: #505050;
 }
 
-/* Header Styles */
+/* ================================
+   Header Styles
+================================ */
 header {
     background-color:#008080;
     color: #fff;
@@ -50,7 +54,9 @@ header {
 }
 
 
-/* Navigation Styles */
+/* ================================
+   Navigation Styles
+================================ */
 nav ul {
     background-color: #fff;
     color: #333;
@@ -83,7 +89,9 @@ nav a:hover {
     background-color:#ccffff; /* slight shade*/  
 }
 
-/* Banner Styles */
+/* ================================
+   Banner Styles
+================================ */
 .banner-container {
     display: flex;
     justify-content: center;
@@ -99,7 +107,9 @@ nav a:hover {
     height: auto;
 }
 
-/* Main Content Styles */
+/* ================================
+   Main Content Styles
+================================ */
 main {
     max-width: 800px;
     margin: 0 auto;
@@ -159,7 +169,9 @@ main h3 {
     }
 }
 
-/* Call to Action Styles */
+/* ================================
+   Call to Action Styles
+================================ */
 .cta-container {
     text-align: center;
     padding: 20px;
@@ -183,7 +195,10 @@ main h3 {
     background-color: #008B8B;
 }
 
-/* Footer Styles */
+/* ================================
+   Footer Styles
+================================ */
+
 footer {
     background-color: #2F4F4F;
     color: #fff;
@@ -214,58 +229,127 @@ footer p {
     margin: 10px 0 0;
 }
 
-/*Here, will be the Gallery slide show style*/
+/* ================================
+   Gallery Slide show Style
+================================*/
+
 * {
     box-sizing: border-box;
-    }
-    .slideshow-img {
-    vertical-align: middle;
-    width: 100%;
-    }
-    /* Position the image container (needed to position the left and right
-    arrows) */
-    .container {
+  }
+
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
     position: relative;
-    }
-    /* Hide the images by default */
-    .mySlides {
+    align-content: center;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
     display: none;
-    }
-    /* Add a pointer when hovering over the thumbnail images */
-    .cursor {
+  }
+  .mySlides img{
+    width: 100%;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
     cursor: pointer;
-    }
-    /* Next & previous buttons */
-    .prev,
-    .next {
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
     cursor: pointer;
     position: absolute;
     top: 40%;
     width: auto;
     padding: 16px;
     margin-top: -50px;
-    color: white;
+    color: rgb(184, 0, 166);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 40px;
     border-radius: 0 3px 3px 0;
-    user-select: none;
     -webkit-user-select: none;
-    }
-    /* Position the "next button" to the right */
-    .next {
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
     right: 0;
     border-radius: 3px 0 0 3px;
-    }
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover,
-    .next:hover {
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-    }
-    /* Number text (1/3 etc) */
-    .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: rgb(184, 0, 166);
+    font-size: 25px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
-    }
+  }
+
+    /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
