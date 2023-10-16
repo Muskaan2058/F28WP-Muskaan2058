@@ -10,20 +10,6 @@
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Lumanosimo&family=Major+Mono+Display&display=swap');
-    
-   .gallery-container {
-	margin: 0 auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-top: 40px;
-  }
-
-   .gallery-container img {
-	width: 24%;
-	margin-bottom: 20px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
   </style>
   
 </head>
@@ -94,11 +80,11 @@
           <div class="numbertext">8 / 8</div>
           <img src="images/8.jpeg" alt="Slide 8">
         </div>
-        <a class="prev" href="#">&#10094; Previous</a>
-        <a class="next" href="#">&#10095; Next</a>
+        <a class="prev" onclick="changeSlide(-1)">&#10094; Previous</a>
+        <a class="next" onclick="changeSlide(1)">&#10095; Next</a>
       </div>
 
-      
+
       <div class="row">
         <!-- First Row of Thumbnails -->
         <div class="column">
@@ -154,61 +140,39 @@
 
 <script src="script.js"></script>
 <script>
-  const slides = document.querySelectorAll(".mySlides");
-  let currentSlide = 1;
-   // Initialize the slideshow
-   showSlide(current);
+const slides = document.querySelectorAll(".mySlides");
+let currentSlide = 1;
+showSlide(currentSlide);
 
-  // Function to update the slide's visibility
-  function showSlide(n) {
-    // Hide all slides
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-
-    // Only show the current slide
-    slides[current - 1].style.display = "block";
+function showSlide(n) {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
+  slides[n - 1].style.display = "block";
+}
 
-  // Function to change the current slide
-  function currentSlide(n) {
-    showSlide(n);
-    current = n; // Update the current slide number
+function currentSlide(n) {
+  showSlide(n);
+  currentSlide = n;
+}
+
+function changeSlide(n) {
+  currentSlide += n;
+  if (currentSlide > slides.length) {
+    currentSlide = 1;
+  } else if (currentSlide < 1) {
+    currentSlide = slides.length;
   }
+  showSlide(currentSlide);
+}
 
-  // Function to increment/decrement the current slide number
-  function changeSlide(n) {
-    current += n;
-
-    // Ensure the current slide number stays within the valid range
-    if (current > slides.length) {
-      current = 1;
-    } else if (current < 1) {
-      current= slides.length;
-    }
-
-    showSlide(current);
-  }
-
-  // Add event listeners for thumbnail clicks
-  const thumbnails = document.querySelectorAll(".demo.cursor");
-  for (let i = 0; i < thumbnails.length; i++) {
+const thumbnails = document.querySelectorAll(".demo.cursor");
+for (let i = 0; i < thumbnails.length; i++) {
   thumbnails[i].addEventListener("click", () => {
-    current(i + 1);
+    currentSlide(i + 1);
   });
-  };
+}
 
-  // Add event listeners for "Previous" and "Next" links
-  const prevLink = document.querySelector(".prev");
-  const nextLink = document.querySelector(".next");
-
-  prevLink.addEventListener("click", () => {
-    changeSlide(-1);
-  });
-
-  nextLink.addEventListener("click", () => {
-    changeSlide(1);
-  });
 </script>
 
 </body>
