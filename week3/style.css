@@ -291,7 +291,7 @@ footer p {
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover,
   .next:hover {
-    background-color: #b3b3b3;;
+    background-color: rgba(0, 0, 0, 0.4); /
   }
   
   /* Number text (1/8 etc) */
