@@ -180,6 +180,14 @@
     showSlide(currentSlide);
   }
 
+  // Add event listeners for thumbnail clicks
+  const thumbnails = document.querySelectorAll(".demo.cursor");
+  for (let i = 0; i < thumbnails.length; i++) {
+    thumbnail.addEventListener("click", () => {
+      currentSlide(i + 1);
+    });
+  };
+
   // Add event listeners for "Previous" and "Next" links
   const prevLink = document.querySelector(".prev");
   const nextLink = document.querySelector(".next");
