@@ -1,39 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Gallery - Wanderlust Voyages</title>
   <link rel="stylesheet" href="style.css">
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Lumanosimo&family=Major+Mono+Display&display=swap');
-    
-   .gallery-container {
-	 margin: 0 auto;
-	 display: flex;
-	 flex-wrap: wrap;
-	 justify-content: space-between;
-	 margin-top: 40px;
-   }
-
-   .gallery-container img {
-	 width: 24%;
-	 margin-bottom: 20px;
-	 box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-   }
- </style>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </style>
+  
 </head>
 
 <body>
+  <div>
+    <div id="header-placeholder"></div>
 
- <div>
-  <div id="header-placeholder"></div>
+    <!-- Header Section -->
+    <header id="main-header">
+      <h1 class="headeraH1">Wanderlust Voyages | Travel Agency</h1>
+    </header>
 
-  <!-- Header Section -->
-  <header id="main-header">
-    <h1 class="headeraH1">Wanderlust Voyages | Travel Agency</h1>
-  </header>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -42,120 +31,118 @@
         <li class="active"><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="tasks.html">Tasks</a></li>
-     </ul>
-   </nav>
+      </ul>
+    </nav>
   
     <!-- Gallery Section -->
-   <main class="services">
+    <main class="services">
       <h1>Gallery</h1>
 
+      <div class="container">
 
+        <!-- Slides -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 8</div>
+          <img src="images/1.jpeg" alt="Slide 1">
+        </div>
 
-     <div class="container">
-
-      <div class="mySlides">
-        <div class="numbertext">1 / 8</div>
-        <img src="images/1.jpeg" alt="Slide 1">
+        <div class="mySlides">
+          <div class="numbertext">2 / 8</div>
+          <img src="images/2.jpeg" alt="Slide 2">
+        </div>
+  
+        <div class="mySlides">
+          <div class="numbertext">3 / 8</div>
+          <img src="images/3.jpeg" alt="Slide 3">
+        </div>
+  
+        <div class="mySlides">
+          <div class="numbertext">4 / 8</div>
+          <img src="images/4.jpeg" alt="Slide 4">
+        </div>
+  
+        <div class="mySlides">
+          <div class="numbertext">5 / 8</div>
+          <img src="images/5.jpeg" alt="Slide 5">
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">6 / 8</div>
+          <img src="images/6.jpeg" alt="Slide 6">
+        </div>
+  
+        <div class="mySlides">
+          <div class="numbertext">7 / 8</div>
+          <img src="images/7.jpeg" alt="Slide 7">
+        </div>
+  
+        <div class="mySlides">
+          <div class="numbertext">8 / 8</div>
+          <img src="images/8.jpeg" alt="Slide 8">
+        </div>
+        <a class="prev" href="#">&#10094; Previous</a>
+        <a class="next" href="#">&#10095; Next</a>
       </div>
 
-      <div class="mySlides">
-        <div class="numbertext">2 / 8</div>
-        <img src="images/2.jpeg" alt="Slide 2">
-      </div>
+      <div class="row">
 
-      <div class="mySlides">
-        <div class="numbertext">3 / 8</div>
-        <img src="images/3.jpeg" alt="Slide 3">
-      </div>
+        <!-- Gallery Thumbnails (Columns) -->
+        <div class="column">
+          <img class="demo cursor" src="images/1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Slide 1">
+        </div>
 
-      <div class="mySlides">
-        <div class="numbertext">4 / 8</div>
-        <img src="images/4.jpeg" alt="Slide 4">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">5 / 8</div>
-        <img src="images/5.jpeg" alt="Slide 5">
-      </div>
-      
-      <div class="mySlides">
-        <div class="numbertext">6 / 8</div>
-        <img src="images/6.jpeg" alt="Slide 6">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">7 / 8</div>
-        <img src="images/7.jpeg" alt="Slide 7">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">8 / 8</div>
-        <img src="images/8.jpeg" alt="Slide 8">
-      </div>
+        <div class="column">
+          <img class="demo cursor" src="images/2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Slide 2">
+        </div>
     
-      <a class="prev" href="#">&#10094; Previous</a>
-      <a class="next" href="#">&#10095; Next</a>
+        <div class="column">
+          <img class="demo cursor" src="images/3.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Slide 3">
+        </div>
+    
+        <div class="column">
+          <img class="demo cursor" src="images/4.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Slide 4">
+        </div>
+    
+        <div class="column">
+          <img class="demo cursor" src="images/5.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Slide 5">
+        </div>
+        
+        <div class="column">
+          <img class="demo cursor" src="images/6.jpeg" style="width:100%" onclick="currentSlide(6)" alt="Slide 6">
+        </div>
+  
+        <div class="column">
+          <img class="demo cursor" src="images/7.jpeg" style="width:100%" onclick="currentSlide(7)" alt="Slide 7">
+        </div>
+  
+        <div class="column">
+          <img class="demo cursor" src="images/8.jpeg" style="width:100%" onclick="currentSlide(8)" alt="Slide 8">
+        </div>
 
+      </div>
     </div>
 
-    <div class="row">
-      <div class="column">
-        <img class="demo cursor" src="images/1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Slide 1 ">
-      </div>
-  
-      <div class="column">
-        <img class="demo cursor" src="images/2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Slide 2">
-      </div>
-  
-      <div class="column">
-        <img class="demo cursor" src="images/3.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Slide 3">
-      </div>
-  
-      <div class="column">
-        <img class="demo cursor" src="images/4.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Slide 4">
-      </div>
-  
-      <div class="column">
-        <img class="demo cursor" src="images/5.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Slide 5">
-      </div>
-      
-      <div class="column">
-        <img class="demo cursor" src="images/6.jpeg" style="width:100%" onclick="currentSlide(6)" alt="Slide 6">
-      </div>
+    <!-- Call to Action -->
+    <section class="cta-container">
+      <h2>Ready to Experience Our Services?</h2>
+      <p>Join us today and discover the difference we can make for you!</p>
+      <a href="contact.html" class="cta-button">Contact Us Now</a>
+    </section>
+  </main>
 
-      <div class="column">
-        <img class="demo cursor" src="images/7.jpeg" style="width:100%" onclick="currentSlide(7)" alt="Slide 7">
-      </div>
+  <!-- Footer -->
+  <footer>
+    <ul>
+      <li><a href="https://www.facebook.com/">Facebook</a></li>
+      <li><a href="https://twitter.com/">Twitter</a></li>
+      <li><a href="https://www.instagram.com/">Instagram</a></li>
+    </ul>
+    <p>&copy; 2024 Wanderlust Voyages | Travel Agency. All rights reserved.</p>
+  </footer>
+</div>
 
-      <div class="column">
-        <img class="demo cursor" src="images/8.jpeg" style="width:100%" onclick="currentSlide(8)" alt="Slide 8">
-      </div>
-
-     </div>
-
-   </div>
-
-   <!-- Call to Action -->
-   <section class="cta-container">
-    <h2>Ready to Experience Our Services?</h2>
-    <p>Join us today and discover the difference we can make for you!</p>
-    <a href="contact.html" class="cta-button">Contact Us Now</a>
-   </section>
-
-   </main>
-
-   <footer>
-      <ul>
-        <li><a href="https://www.facebook.com/">Facebook</a></li>
-        <li><a href="https://twitter.com/">Twitter</a></li>
-        <li ><a href="https://www.instagram.com/">Instagram</a></li>
-      </ul>
-     <p >&copy; 2024 Wanderlust Voyages | Travel Agency. All rights reserved.</p>
-   </footer>
- </div>
-
- <script src="script.js"></script>
- <script>
+<script src="script.js"></script>
+<script>
   const slides = document.querySelectorAll(".mySlides");
   let currentSlide = 1;
 
@@ -163,7 +150,7 @@
   function showSlide(n) {
     // Hide all slides
     for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
+      slides[i].style.display = "none";
     }
 
     // Only show the current slide
@@ -205,7 +192,6 @@
     changeSlide(1);
   });
 </script>
-
 
 </body>
 </html>
