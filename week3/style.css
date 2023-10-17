@@ -373,7 +373,6 @@ footer p {
 
 /* Style for input fields inside the container */
 .input-control input {
-    border: 2px solid #f0f0f0;
     border-radius: 4px;
     display: block;
     font-size: 12px;
@@ -388,12 +387,12 @@ footer p {
 
 /* Style for input fields with class "input-success" */
 .input-control.input-success input {
-    border: 2px solid #09c372;
+    border: 3px solid #09c372;
 }
 
 /* Style for input fields with class "input-error" */
 .input-control.input-error input {
-    border: 2px solid #ff3860;
+    border: 3px solid #ff3860;
 }
 
 /* Style for the error message */
