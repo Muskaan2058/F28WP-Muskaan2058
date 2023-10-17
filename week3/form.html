@@ -90,25 +90,25 @@
 
   if (value === "") {
     errorDiv.textContent = "This field is required";
-    input.style.border = "2px solid #ffcccc"; // Set the border color to red
+    input.style.border = "2px solid #ff9999"; // Set the border color to red
     return false;
   } else {
     errorDiv.textContent = "";
-    input.style.border = "2px solid #d8f3ea"; // Set the border color to green
+    input.style.border = "2px solid #b3ffec"; // Set the border color to green
   }
 
   if (input.id === "email") {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(value)) {
       errorDiv.textContent = "Invalid email format";
-      input.style.border = "2px solid #ffcccc"; // Set the border color to red
+      input.style.border = "2px solid #ff9999"; // Set the border color to red
       return false;
     }
   }
 
   if (input.id === "password" && value.length < 8) {
     errorDiv.textContent = "Password must be at least 8 characters long";
-    input.style.border = "2px solid #ffcccc"; // Set the border color to red
+    input.style.border = "2px solid #ff9999"; // Set the border color to red
     return false;
   }
 
@@ -116,12 +116,12 @@
     const passwordField = document.getElementById("password");
     if (value !== passwordField.value) {
       errorDiv.textContent = "Passwords do not match";
-      input.style.border = "3px solid #ffcccc"; // Set the border color to red
+      input.style.border = "3px solid #ff9999"; // Set the border color to red
       return false;
     }
   }
 
-  input.style.border = "2px solid #d8f3ea"; // Reset the border color to the green
+  input.style.border = "2px solid #b3ffec"; // Sset the border color to the green
   return true;
 }
   </script>

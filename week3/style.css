@@ -388,17 +388,17 @@ footer p {
 
 /* Style for input fields with class "input-success" */
 .input-control.input-success input {
-    border: 3px solid #d8f3ea;
+    border: 3px solid #b3ffec;
 }
 
 /* Style for input fields with class "input-error" */
 .input-control.input-error input {
-    border: 3px solid #ffcccc;
+    border: 3px solid #ff9999;
 }
 
 /* Style for the error message */
 .input-control .error-message {
-    color: #ffcccc;
+    color: #ff4d4d;
     font-size: 9px;
     height: 13px;
 }
