@@ -341,64 +341,65 @@ footer p {
 /* Style for the form */
 #form {
     width: 300px;
-    margin: 20vh auto 0 auto; /* Center the form vertically and horizontally */
+    margin: 20vh auto 0 auto;
     padding: 20px;
-    background-color: whitesmoke; /* Light gray background for the form */
-    border-radius: 4px; /* Rounded corners for the form */
+    background-color: whitesmoke;
+    border-radius: 4px;
     font-size: 12px;
 }
 
 /* Style for the form's heading */
 #form h1 {
-    color: #0f2027; /* Dark text color for the heading */
-    text-align: center; /* Center-align the heading */
+    color: #0f2027;
+    text-align: center;
 }
 
 /* Style for the form's button */
 #form button {
     padding: 10px;
-    margin-top: 10px; /* Space above the button */
-    width: 100%; /* Make the button expand the full width of the form */
-    color: white; /* White text color for the button */
-    background-color: #008080; /* Green background color for the button */
-    border: none; /* Remove the default border */
-    border-radius: 4px; /* Rounded corners for the button */
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: #008080;
+    border: none;
+    border-radius: 4px;
 }
 
 /* Container for input fields */
 .input-control {
     display: flex;
-    flex-direction: column; /* Stack the children (label, input, error message) vertically */
+    flex-direction: column;
 }
 
 /* Style for input fields inside the container */
 .input-control input {
-    border: 2px solid #f0f0f0; /* Light gray border for the inputs */
-    border-radius: 4px; /* Rounded corners for the inputs */
-    display: block; /* Display input field as a block */
-    font-size: 12px; /* Text size within the input field */
-    padding: 10px; /* Space inside the input field */
-    width: 100%; /* Input field takes up 100% of the form's width */
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
 }
 
 /* Remove focus outline from input fields */
 .input-control input:focus {
-    outline: 0; /* Remove outline when input is focused */
+    outline: 0;
 }
 
-/* Style for input fields with class "success" */
-.input-control.success input {
-    border-color: #09c372; /* Green border to indicate successful input */
+/* Style for input fields with class "input-success" */
+.input-control.input-success input {
+    border-color: #09c372;
 }
 
-/* Style for input fields with class "error" */
-.input-control.error input {
-    border-color: #ff3860; /* Red border to indicate an error in input */
+/* Style for input fields with class "input-error" */
+.input-control.input-error input {
+    border-color: #ff3860;
 }
 
 /* Style for the error message */
-.input-control .error {
-    color: #ff3860; /* Red text color for error messages */
-    font-size: 9px; /* Smaller font size for error messages */
-    height: 13px; /* Explicit height to ensure consistent spacing */
+.input-control .error-message {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
 }
+
