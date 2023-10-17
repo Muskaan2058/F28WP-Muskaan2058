@@ -1,54 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Gallery - Wanderlust Voyages</title>
   <link rel="stylesheet" href="style.css">
-
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Lumanosimo&family=Major+Mono+Display&display=swap');
   </style>
-  
 </head>
-
 <body>
-        <!-- Header Section -->
-        <header id="main-header">
-            <h1 class="headeraH1">Wanderlust Voyages | Travel Agency</h1>
-          </header>
+  <!-- Header Section -->
+  <header id="main-header">
+    <h1 class="header-title">Wanderlust Voyages | Travel Agency</h1>
+  </header>
 
-    <form id="registration-form">
-        <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <div class="error" id="username-error"></div>
-        </div>
-        
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <div class="error" id="email-error"></div>
-        </div>
-        
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <div class="error" id="password-error"></div>
-        </div>
-        
-        <div class="form-group">
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
-            <div class="error" id="confirm-password-error"></div>
-        </div>
-        
-        <button type="submit">Submit</button>
-    </form>
+  <form id="registration-form">
+    <h1>Form</h1>
+    <div class="input-control">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <div class="error-message" id="username-error"></div>
+    </div>
 
-    <!-- Footer -->
+    <div class="input-control">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <div class="error-message" id="email-error"></div>
+    </div>
+
+    <div class="input-control">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <div class="error-message" id="password-error"></div>
+    </div>
+
+    <div class="input-control">
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password" required>
+      <div class="error-message" id="confirm-password-error"></div>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Footer -->
   <footer>
     <ul>
       <li><a href="https://www.facebook.com/">Facebook</a></li>
@@ -58,81 +54,80 @@
     <p>&copy; 2024 Wanderlust Voyages | Travel Agency. All rights reserved.</p>
   </footer>
 
-    <script>
-const form = document.getElementById("registration-form");
+  <script>
+    const form = document.getElementById("form");
 
-form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    if (validateForm()) {
-        alert("Form submitted."); 
-    }
-});
-
-const inputFields = form.querySelectorAll("input");
-
-inputFields.forEach((input) => {
-    input.addEventListener("blur", function () {
-        validateInput(input);
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (validateForm()) {
+        alert("Form submitted.");
+      }
     });
-});
 
-function validateForm() {
-    let isValid = true;
+    const inputFields = form.querySelectorAll("input");
 
-    for (let i = 0; i < inputFields.length; i++) {
+    inputFields.forEach((input) => {
+      input.addEventListener("blur", function () {
+        validateInput(input);
+      });
+    });
+
+    function validateForm() {
+      let isValid = true;
+
+      for (let i = 0; i < inputFields.length; i++) {
         if (!validateInput(inputFields[i])) {
-            isValid = false;
+          isValid = false;
         }
+      }
+
+      return isValid;
     }
 
-    return isValid;
-}
+    function validateInput(input) {
+      const errorDiv = document.getElementById(input.id + "-error");
+      const value = input.value.trim();
 
-function validateInput(input) {
-    const errorDiv = document.getElementById(input.id + "-error");
-    const value = input.value.trim();
-
-    if (value === "") {
+      if (value === "") {
         errorDiv.textContent = "This field is required";
-        input.classList.remove("success");
-        input.classList.add("error");
+        input.classList.remove("input-success");
+        input.classList.add("input-error");
         return false;
-    } else {
+      } else {
         errorDiv.textContent = "";
-        input.classList.remove("error");
-        input.classList.add("success");
-    }
+        input.classList.remove("input-error");
+        input.classList.add("input-success");
+      }
 
-    if (input.id === "email") {
+      if (input.id === "email") {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(value)) {
-            errorDiv.textContent = "Invalid email format";
-            input.classList.remove("success");
-            input.classList.add("error");
-            return false;
+          errorDiv.textContent = "Invalid email format - should include @";
+          input.classList.remove("input-success");
+          input.classList.add("input-error");
+          return false;
         }
-    }
+      }
 
-    if (input.id === "password" && value.length < 8) {
-        errorDiv.textContent = "Password must be at least 8 characters long";
-        input.classList.remove("success");
-        input.classList.add("error");
-        return false;
-    }
+      if (input.id === "password" && value.length < 8) {
+         errorDiv.textContent = "Password must be at least 8 characters long";
+         input.classList.remove("input-success");
+         input.classList.add("input-error"); 
+         return false;
+       }
 
-    if (input.id === "confirm-password") {
+      if (input.id === "confirm-password") {
         const passwordField = document.getElementById("password");
         if (value !== passwordField.value) {
-            errorDiv.textContent = "Passwords do not match";
-            input.classList.remove("success");
-            input.classList.add("error");
-            return false;
+          errorDiv.textContent = "Passwords do not match";
+          input.classList.remove("input-success");
+          input.classList.add("input-error");
+          return false;
         }
+      }
+
+      return true;
     }
-
-    return true;
-}
-    </script>
-
+  </script>
 </body>
 </html>
