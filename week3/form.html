@@ -85,50 +85,45 @@
     }
 
     function validateInput(input) {
-      const errorDiv = document.getElementById(input.id + "-error");
-      const value = input.value.trim();
+  const errorDiv = document.getElementById(input.id + "-error");
+  const value = input.value.trim();
 
-      if (value === "") {
-        errorDiv.textContent = "This field is required";
-        input.classList.remove("input-success");
-        input.classList.add("input-error");
-        return false;
-      } else {
-        errorDiv.textContent = "";
-        input.classList.remove("input-error");
-        input.classList.add("input-success");
-      }
+  if (value === "") {
+    errorDiv.textContent = "This field is required";
+    input.style.border = "3px solid #ff3860"; // Set the border color to red
+    return false;
+  } else {
+    errorDiv.textContent = "";
+    input.style.border = "3px solid #09c372"; // Set the border color to green
+  }
 
-      if (input.id === "email") {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(value)) {
-          errorDiv.textContent = "Invalid email format - should include @";
-          input.classList.remove("input-success");
-          input.classList.add("input-error");
-          return false;
-        }
-      }
-
-      if (input.id === "password" && value.length < 8) {
-         errorDiv.textContent = "Password must be at least 8 characters long";
-         input.classList.remove("input-success");
-         input.classList.add("input-error"); 
-         return false;
-       }
-
-      if (input.id === "confirm-password") {
-        const passwordField = document.getElementById("password");
-        if (value !== passwordField.value) {
-          errorDiv.textContent = "Passwords do not match";
-          input.classList.remove("input-success");
-          input.classList.add("input-error");
-          input.style.borderColor = "#008080";
-          return false;
-        }
-      }
-
-      return true;
+  if (input.id === "email") {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(value)) {
+      errorDiv.textContent = "Invalid email format - should include @";
+      input.style.border = "3px solid #ff3860"; // Set the border color to red
+      return false;
     }
+  }
+
+  if (input.id === "password" && value.length < 8) {
+    errorDiv.textContent = "Password must be at least 8 characters long";
+    input.style.border = "3px solid #ff3860"; // Set the border color to red
+    return false;
+  }
+
+  if (input.id === "confirm-password") {
+    const passwordField = document.getElementById("password");
+    if (value !== passwordField.value) {
+      errorDiv.textContent = "Passwords do not match";
+      input.style.border = "3px solid #ff3860"; // Set the border color to red
+      return false;
+    }
+  }
+
+  input.style.border = "3px solid #09c372"; // Reset the border color to the green
+  return true;
+}
   </script>
 </body>
 </html>
