@@ -4,7 +4,7 @@
 const header = document.getElementById("main-header");
 const headerPlaceholder = document.getElementById("header-placeholder");
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   if (window.scrollY > headerPlaceholder.clientHeight) {
     header.classList.add("sticky");
     headerPlaceholder.style.display = "block"; // Show the placeholder
@@ -13,5 +13,3 @@ window.addEventListener("scroll", function() {
     headerPlaceholder.style.display = "none"; // Hide the placeholder
   }
 });
-
-
