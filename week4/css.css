@@ -50,10 +50,7 @@ button {
 
 #weather-info div {
     color: purple;
-  }
-  
-  #weather-info hr {
     margin: 10px 0;
-    border: none;
-    border-top: 1px solid purple;
+    border-bottom: 1px solid #888888; /* Add border below each div text */
+    display: inline-block; /* Ensure the div only takes the width of its content */
   }
