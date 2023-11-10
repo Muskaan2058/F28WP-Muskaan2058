@@ -47,3 +47,13 @@ button {
     background-clip: text;
     margin: 20px 0;
 }
+
+#weather-info div {
+    color: purple;
+  }
+  
+  #weather-info hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid purple;
+  }
