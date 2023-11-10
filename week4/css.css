@@ -59,9 +59,9 @@ button {
     content: '';
     display: block;
     width: 50%;
-    height: 2px;
-    background-color: grey; /* Line color */
+    height: 1px;
+    background-color:#B8B8B8; /* Line color */
     position: absolute;
-    bottom: -10px; /* Adjust this value for spacing below the line */
-    left: 0;
+    bottom: -15px; /* Adjust this value for spacing below the line */
+    left: 25%;;
 }
