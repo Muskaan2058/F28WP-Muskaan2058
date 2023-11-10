@@ -41,6 +41,7 @@ btn.addEventListener('click', function () {
           <strong>The weather in ${cityName} is ${weatherDescription}.</strong><br>
           The temperature is ${mainTemperatureCelsius}°C with a wind speed of ${windSpeed} m/s.
         </div>
+        <hr>
       `;
     })
     .catch(error => {
