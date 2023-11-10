@@ -51,7 +51,7 @@ button {
 /* Add CSS for city info */
 #weather-info div {
     color: purple; /* Text color */
-    margin: 20px 0; /* Spacing above and below text */
+    margin: 30px 0; /* Spacing above and below text */
     position: relative; /* Create relative positioning for the line */
 }
 
